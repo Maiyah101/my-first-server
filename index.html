@@ -1,18 +1,33 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>My First Server</title>
-    <style>
-        /* Your CSS goes here */
-    </style>
+  <meta charset="UTF-8">
+  <title>Spring Server 🌸</title>
+  <link rel="stylesheet" href="styles.css">
 </head>
+
 <body>
-    <!-- Your HTML goes here -->
-    
-    <script>
-        // Your javascript code (optional)
-    </script>
+
+  <div class="box">
+    <h1>🌸 Spring Server 🌸</h1>
+    <p>Floating pink flowers & spring vibes</p>
+  </div>
+
+  <script>
+    function createFlower() {
+      const flower = document.createElement("div");
+      flower.classList.add("flower");
+      flower.innerHTML = "🌸";
+      flower.style.left = Math.random() * window.innerWidth + "px";
+      flower.style.animationDuration = (Math.random() * 5 + 4) + "s";
+
+      document.body.appendChild(flower);
+
+      setTimeout(() => flower.remove(), 10000);
+    }
+
+    setInterval(createFlower, 300);
+  </script>
+
 </body>
 </html>
